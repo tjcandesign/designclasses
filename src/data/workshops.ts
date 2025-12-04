@@ -57,22 +57,23 @@ export const workshops: Workshop[] = [
         available: false
     },
     {
-        id: 'exhibit-design',
-        title: 'Introduction to Exhibition Design',
-        description: 'Learn how to translate 2D graphics into 3D spaces, focusing on environmental design and visitor experience.',
+        id: 'ai-design-workflow',
+        title: 'Modern AI-Assisted Design Workflow',
+        description: 'Learn to build and deploy working prototypes in just over an hour using AI tools like Superwhisper, ChatGPT, Windsurf, and Antigravity.',
         learns: [
-            'Spatial planning and scale',
-            'Materiality and production methods',
-            'Wayfinding and signage systems',
-            'User flow in physical spaces'
+            'Voice-to-text AI workflow with Superwhisper',
+            'ChatGPT transcript to prompt engineering',
+            'AI-assisted coding with Windsurf & Antigravity',
+            'Rapid prototyping & deployment via Netlify'
         ],
         outcomes: [
-            'Scale model or 3D visualization of an exhibit',
-            'Technical production files',
-            'Understanding of large-format print'
+            'A fully deployed, working website',
+            'Understanding of AI-driven development',
+            'Drastically reduced development time'
         ],
-        image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=1000&auto=format&fit=crop',
-        available: false
+        image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1000&auto=format&fit=crop',
+        available: false,
+        sessions: 1
     },
     {
         id: 'laser-cutting',
