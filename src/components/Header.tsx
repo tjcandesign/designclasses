@@ -11,7 +11,7 @@ const Header = () => {
                 <nav>
                     <ul className="flex gap-6">
                         <li>
-                            <Link to="/course" className="uppercase font-medium text-sm text-white hover:text-[#FFC107] transition-colors">
+                            <Link to="/course" className="uppercase font-medium text-sm text-white hover:text-[#FFC107] transition-colors" style={{ fontFamily: "'DM Mono', monospace" }}>
                                 Workshops
                             </Link>
                         </li>
@@ -21,6 +21,7 @@ const Header = () => {
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="uppercase font-medium text-sm text-gray-400 hover:text-white transition-colors"
+                                style={{ fontFamily: "'DM Mono', monospace" }}
                             >
                                 Studio
                             </a>

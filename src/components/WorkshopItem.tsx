@@ -3,9 +3,10 @@ import type { Workshop } from '../data/workshops';
 
 interface WorkshopItemProps {
     workshop: Workshop;
+    highlighted?: boolean;
 }
 
-const WorkshopItem: React.FC<WorkshopItemProps> = ({ workshop }) => {
+const WorkshopItem: React.FC<WorkshopItemProps> = ({ workshop, highlighted = false }) => {
     // Render seat icons (filled or empty)
     const renderSeatIcons = (total: number = 8, available: number = 0) => {
         const filled = total - available;
@@ -28,8 +29,10 @@ const WorkshopItem: React.FC<WorkshopItemProps> = ({ workshop }) => {
         );
     };
 
+    const borderClass = highlighted ? 'border-[#FFC107]' : 'border-gray-800';
+
     return (
-        <div className="workshop-item bg-[#1a1a1a] border border-gray-800 hover:border-[#FFC107] transition-colors duration-300 group flex flex-col h-full">
+        <div className={`workshop-item bg-[#1a1a1a] border ${borderClass} hover:border-[#FFC107] transition-colors duration-300 group flex flex-col h-full`}>
             <div className="p-8 flex flex-col flex-grow">
                 <div className="mb-6">
                     <h3 className="text-2xl font-bold text-white group-hover:text-[#FFC107] transition-colors mb-2">
@@ -74,8 +77,7 @@ const WorkshopItem: React.FC<WorkshopItemProps> = ({ workshop }) => {
                             )}
                             {workshop.sessions && (
                                 <div className="text-sm text-gray-400 mt-1" style={{ fontFamily: "'DM Mono', monospace" }}>
-                                    {workshop.sessions} session{workshop.sessions > 1 ? 's' : ''}
-                                    <span className="text-xs ml-1">({workshop.sessions * 90} min)</span>
+                                    {workshop.sessions === 1 ? '1 session (90 min)' : `${workshop.sessions} x 90-minute sessions`}
                                 </div>
                             )}
                         </div>
@@ -83,7 +85,7 @@ const WorkshopItem: React.FC<WorkshopItemProps> = ({ workshop }) => {
                         {workshop.seatsAvailable !== undefined && workshop.available && (
                             <div className="text-right">
                                 <div className="text-xs text-gray-500 mb-1" style={{ fontFamily: "'DM Mono', monospace" }}>
-                                    {workshop.seatsAvailable}/{8} seats
+                                    {workshop.seatsAvailable}/{8} seats Remaining
                                 </div>
                                 {renderSeatIcons(8, workshop.seatsAvailable)}
                             </div>

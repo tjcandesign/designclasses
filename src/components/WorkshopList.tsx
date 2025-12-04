@@ -18,31 +18,12 @@ const WorkshopList: React.FC = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
                     {displayedWorkshops.map((workshop) => (
-                        <WorkshopItem key={workshop.id} workshop={workshop} />
+                        <WorkshopItem
+                            key={workshop.id}
+                            workshop={workshop}
+                            highlighted={workshop.id === 'intro-graphic-design'}
+                        />
                     ))}
-                </div>
-
-                {/* New Courses Coming Soon Section */}
-                <div className="mt-24 pt-16 border-t border-gray-800">
-                    <div className="max-w-3xl mx-auto text-center">
-                        <h3 className="text-3xl font-bold mb-4 text-white">New Courses Coming Soon</h3>
-                        <p className="text-gray-400 mb-8">
-                            We're always developing new workshops based on community needs. Have an idea for a course you'd like to see?
-                        </p>
-                        <form className="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto">
-                            <input
-                                type="text"
-                                placeholder="Suggest a course topic..."
-                                className="flex-grow px-4 py-3 bg-[#1a1a1a] border border-gray-700 text-white placeholder-gray-500 focus:outline-none focus:border-[#FFC107] transition-colors"
-                            />
-                            <button
-                                type="submit"
-                                className="px-8 py-3 bg-[#FFC107] text-black font-bold hover:bg-white transition-all uppercase text-sm tracking-widest whitespace-nowrap"
-                            >
-                                Submit Idea
-                            </button>
-                        </form>
-                    </div>
                 </div>
             </div>
         </section>
