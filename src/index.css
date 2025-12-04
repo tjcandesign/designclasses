@@ -14,6 +14,10 @@
 
   /* Layout */
   --container-width: 1440px;
+
+  /* Spacing */
+  --spacing-lg: 32px;
+  --spacing-xl: 64px;
 }
 
 body {
