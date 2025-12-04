@@ -1,28 +1,24 @@
 const Footer = () => {
     return (
-        <footer className="footer border-t py-lg" style={{ marginTop: 'var(--spacing-2xl)' }}>
-            <div className="container">
-                <div className="grid">
-                    <div style={{ gridColumn: 'span 6' }}>
-                        <h3 className="text-xl font-bold uppercase mb-4">Workhorse</h3>
-                        <p style={{ color: 'var(--color-text-muted)', maxWidth: '300px' }}>
+        <footer className="footer border-t border-gray-800 py-16 bg-[#111111]">
+            <div className="container mx-auto px-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div>
+                        <h3 className="text-2xl font-bold uppercase mb-4 text-white">Workhorse Studio</h3>
+                        <p className="text-gray-400 max-w-md mb-6">
+                            Hands-on design education in a functioning studio environment.
+                        </p>
+                        <p className="text-gray-400 text-sm">
                             Reclaiming human-centered design for the sake of humanity.
                         </p>
                     </div>
-                    <div style={{ gridColumn: 'span 3' }}>
-                        <h4 className="uppercase font-bold mb-4" style={{ fontSize: 'var(--font-size-sm)' }}>Social</h4>
-                        <ul style={{ color: 'var(--color-text-muted)' }}>
-                            <li><a href="#">Instagram</a></li>
-                            <li><a href="#">LinkedIn</a></li>
-                            <li><a href="#">Twitter</a></li>
-                        </ul>
-                    </div>
-                    <div style={{ gridColumn: 'span 3' }}>
-                        <h4 className="uppercase font-bold mb-4" style={{ fontSize: 'var(--font-size-sm)' }}>Contact</h4>
-                        <p style={{ color: 'var(--color-text-muted)' }}>hello@wrkhrs.co</p>
+                    <div>
+                        <h4 className="uppercase font-bold mb-4 text-sm text-white tracking-wider">Contact</h4>
+                        <p className="text-gray-400 mb-2">hello@wrkhrs.co</p>
+                        <p className="text-gray-400 text-sm">Washington, DC</p>
                     </div>
                 </div>
-                <div style={{ marginTop: 'var(--spacing-xl)', paddingTop: 'var(--spacing-md)', borderTop: '1px solid var(--color-border)', display: 'flex', justifyContent: 'space-between', fontSize: 'var(--font-size-sm)', color: 'var(--color-text-muted)' }}>
+                <div className="mt-12 pt-6 border-t border-gray-800 flex justify-between text-sm text-gray-400">
                     <span>© {new Date().getFullYear()} Workhorse Studio</span>
                     <span>Long Live Design</span>
                 </div>

@@ -5,6 +5,11 @@ export interface Workshop {
     learns: string[];
     outcomes: string[];
     image: string;
+    sessions?: number;
+    price?: number;
+    featured?: boolean;
+    available?: boolean;
+    registrationDate?: string;
 }
 
 export const workshops: Workshop[] = [
@@ -23,24 +28,11 @@ export const workshops: Workshop[] = [
             'Understanding of industry-standard tools',
             'Foundation for further design study'
         ],
-        image: 'https://images.unsplash.com/photo-1626785774573-4b799314346d?q=80&w=1000&auto=format&fit=crop'
-    },
-    {
-        id: 'exhibit-design',
-        title: 'Graphic Design for Exhibit Design',
-        description: 'Learn how to translate 2D graphics into 3D spaces, focusing on environmental design and visitor experience.',
-        learns: [
-            'Spatial planning and scale',
-            'Materiality and production methods',
-            'Wayfinding and signage systems',
-            'User flow in physical spaces'
-        ],
-        outcomes: [
-            'Scale model or 3D visualization of an exhibit',
-            'Technical production files',
-            'Understanding of large-format print'
-        ],
-        image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=1000&auto=format&fit=crop'
+        image: 'https://images.unsplash.com/photo-1626785774573-4b799314346d?q=80&w=1000&auto=format&fit=crop',
+        sessions: 1,
+        price: 150,
+        featured: true,
+        available: true
     },
     {
         id: 'beyond-canva',
@@ -57,7 +49,28 @@ export const workshops: Workshop[] = [
             'Proficiency in Illustrator/InDesign',
             'Professional file management workflows'
         ],
-        image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1000&auto=format&fit=crop'
+        image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1000&auto=format&fit=crop',
+        sessions: 2,
+        price: 210,
+        available: false
+    },
+    {
+        id: 'exhibit-design',
+        title: 'Graphic Design for Exhibit Design',
+        description: 'Learn how to translate 2D graphics into 3D spaces, focusing on environmental design and visitor experience.',
+        learns: [
+            'Spatial planning and scale',
+            'Materiality and production methods',
+            'Wayfinding and signage systems',
+            'User flow in physical spaces'
+        ],
+        outcomes: [
+            'Scale model or 3D visualization of an exhibit',
+            'Technical production files',
+            'Understanding of large-format print'
+        ],
+        image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=1000&auto=format&fit=crop',
+        available: false
     },
     {
         id: 'laser-cutting',
@@ -74,29 +87,13 @@ export const workshops: Workshop[] = [
             'Certification for MLK Fab Lab usage',
             'Understanding of subtractive manufacturing'
         ],
-        image: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=1000&auto=format&fit=crop'
-    },
-    {
-        id: 'tshirt-production',
-        title: 'Graphic Design for T-Shirt Production',
-        description: 'Master the art of designing for apparel, from concept to print-ready separation files.',
-        learns: [
-            'Screen printing constraints and techniques',
-            'Color separation and halftones',
-            'Fabric selection and ink types',
-            'Mockup creation for presentation'
-        ],
-        outcomes: [
-            'Production-ready separation files',
-            'Printed t-shirt sample',
-            'Understanding of the apparel supply chain'
-        ],
-        image: 'https://images.unsplash.com/photo-1503341455253-b2e72333dbdb?q=80&w=1000&auto=format&fit=crop'
+        image: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=1000&auto=format&fit=crop',
+        available: false
     },
     {
         id: 'creative-entrepreneurship',
         title: 'Creative Entrepreneurship for Designers',
-        description: 'Business fundamentals for creatives, covering pricing, contracts, and client management.',
+        description: 'Multi-week course covering business fundamentals for creatives, including pricing, contracts, and client management.',
         learns: [
             'Pricing strategies and value-based billing',
             'Contract essentials and IP rights',
@@ -108,6 +105,8 @@ export const workshops: Workshop[] = [
             'Pricing structure for services',
             'Business plan outline'
         ],
-        image: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=1000&auto=format&fit=crop'
+        image: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=1000&auto=format&fit=crop',
+        available: false,
+        registrationDate: 'Registration starts January 1st'
     }
 ];

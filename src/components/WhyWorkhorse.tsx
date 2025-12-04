@@ -9,7 +9,7 @@ const WhyWorkhorse: React.FC = () => {
                     <div className="w-24 h-1 bg-[#FFC107]"></div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <div className="bg-[#111111] p-8 border border-gray-800 hover:border-[#FFC107] transition-colors duration-300">
                         <h3 className="text-xl font-bold mb-4 text-[#FFC107]">Real Studio Environment</h3>
                         <p className="text-gray-400 text-sm leading-relaxed">
@@ -21,13 +21,6 @@ const WhyWorkhorse: React.FC = () => {
                         <h3 className="text-xl font-bold mb-4 text-[#FFC107]">Hands-On Production</h3>
                         <p className="text-gray-400 text-sm leading-relaxed">
                             We believe in making. Our curriculum emphasizes physical production, from print to fabrication, ensuring you understand the medium.
-                        </p>
-                    </div>
-
-                    <div className="bg-[#111111] p-8 border border-gray-800 hover:border-[#FFC107] transition-colors duration-300">
-                        <h3 className="text-xl font-bold mb-4 text-[#FFC107]">MLK Fab Lab Access</h3>
-                        <p className="text-gray-400 text-sm leading-relaxed">
-                            Gain access to state-of-the-art tools including laser cutters, 3D printers, and CNC machines through our partnership with MLK Library.
                         </p>
                     </div>
 
