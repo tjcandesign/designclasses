@@ -73,7 +73,8 @@ export const workshops: Workshop[] = [
         ],
         image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1000&auto=format&fit=crop',
         available: false,
-        sessions: 1
+        sessions: 1,
+        price: 150
     },
     {
         id: 'laser-cutting',

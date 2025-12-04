@@ -32,73 +32,73 @@ const CTA: React.FC = () => {
                             Spaces are limited for our upcoming workshops. Register now to secure your spot or join the waitlist for future sessions.
                         </p>
 
-                        <div className="max-w-4xl mx-auto bg-[#111111] border border-gray-800 p-8 md:p-12">
+                        <div className="max-w-4xl mx-auto">
                             <div className="text-center mb-12">
-                                <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Ready to Start?</h2>
+                                <h2 className="text-5xl font-bold mb-4 text-white">READY TO START?</h2>
                                 <p className="text-gray-400">Secure your spot in an upcoming workshop.</p>
                             </div>
 
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
                                 <div className="text-center">
-                                    <div className="text-2xl font-bold text-[#FFC107] mb-2" style={{ fontFamily: "'DM Mono', monospace" }}>1</div>
-                                    <h3 className="text-white font-medium mb-2" style={{ fontFamily: "'DM Mono', monospace" }}>Select your workshop</h3>
+                                    <div className="text-4xl font-bold text-[#FFC107] mb-4">1</div>
+                                    <h3 className="text-xl text-white font-bold mb-2">Select your workshop</h3>
                                 </div>
                                 <div className="text-center">
-                                    <div className="text-2xl font-bold text-[#FFC107] mb-2" style={{ fontFamily: "'DM Mono', monospace" }}>2</div>
-                                    <h3 className="text-white font-medium mb-2" style={{ fontFamily: "'DM Mono', monospace" }}>Submit your details</h3>
+                                    <div className="text-4xl font-bold text-[#FFC107] mb-4">2</div>
+                                    <h3 className="text-xl text-white font-bold mb-2">Submit your details</h3>
                                 </div>
                                 <div className="text-center">
-                                    <div className="text-2xl font-bold text-[#FFC107] mb-2" style={{ fontFamily: "'DM Mono', monospace" }}>3</div>
-                                    <h3 className="text-white font-medium mb-2" style={{ fontFamily: "'DM Mono', monospace" }}>We'll confirm your enrollment</h3>
+                                    <div className="text-4xl font-bold text-[#FFC107] mb-4">3</div>
+                                    <h3 className="text-xl text-white font-bold mb-2">We'll confirm your enrollment</h3>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div className="bg-black p-10 shadow-2xl">
-                        <h3 className="text-2xl font-bold text-white mb-6">Express Interest</h3>
+                    <div className="bg-[#e6ac00] p-10 shadow-2xl relative z-20">
+                        <h3 className="text-2xl font-bold text-black mb-6">Sign up for more information</h3>
                         <form onSubmit={handleSubmit} className="space-y-6">
                             <div>
-                                <label htmlFor="name" className="block text-gray-400 text-sm font-bold mb-2 uppercase tracking-wider">Full Name</label>
+                                <label htmlFor="name" className="block text-black text-sm font-bold mb-2 uppercase tracking-wider">Full Name</label>
                                 <input
                                     type="text"
                                     id="name"
                                     name="name"
                                     value={formData.name}
                                     onChange={handleChange}
-                                    className="w-full bg-[#1a1a1a] border border-gray-700 text-white p-4 focus:outline-none focus:border-[#FFC107] transition-colors"
+                                    className="w-full bg-white border border-gray-300 text-black p-4 focus:outline-none focus:border-black transition-colors"
                                     placeholder="Jane Doe"
                                     required
                                 />
                             </div>
                             <div>
-                                <label htmlFor="email" className="block text-gray-400 text-sm font-bold mb-2 uppercase tracking-wider">Email Address</label>
+                                <label htmlFor="email" className="block text-black text-sm font-bold mb-2 uppercase tracking-wider">Email Address</label>
                                 <input
                                     type="email"
                                     id="email"
                                     name="email"
                                     value={formData.email}
                                     onChange={handleChange}
-                                    className="w-full bg-[#1a1a1a] border border-gray-700 text-white p-4 focus:outline-none focus:border-[#FFC107] transition-colors"
+                                    className="w-full bg-white border border-gray-300 text-black p-4 focus:outline-none focus:border-black transition-colors"
                                     placeholder="jane@example.com"
                                     required
                                 />
                             </div>
                             <div>
-                                <label htmlFor="phone" className="block text-gray-400 text-sm font-bold mb-2 uppercase tracking-wider">Phone Number</label>
+                                <label htmlFor="phone" className="block text-black text-sm font-bold mb-2 uppercase tracking-wider">Phone Number</label>
                                 <input
                                     type="tel"
                                     id="phone"
                                     name="phone"
                                     value={formData.phone}
                                     onChange={handleChange}
-                                    className="w-full bg-[#1a1a1a] border border-gray-700 text-white p-4 focus:outline-none focus:border-[#FFC107] transition-colors"
+                                    className="w-full bg-white border border-gray-300 text-black p-4 focus:outline-none focus:border-black transition-colors"
                                     placeholder="(555) 123-4567"
                                 />
                             </div>
                             <button
                                 type="submit"
-                                className="w-full bg-[#FFC107] text-black font-bold py-4 hover:bg-white transition-colors uppercase tracking-widest text-sm"
+                                className="w-full bg-black text-[#FFC107] font-bold py-4 hover:bg-gray-900 transition-colors uppercase tracking-widest text-sm"
                             >
                                 Submit Registration
                             </button>

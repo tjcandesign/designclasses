@@ -7,7 +7,7 @@ const WorkshopList: React.FC = () => {
     const displayedWorkshops = workshops.slice(0, 3);
 
     return (
-        <section id="workshops" className="py-24 bg-black text-white">
+        <section className="py-24 bg-[#0a0a0a] text-white border-b border-gray-800">
             <div className="container mx-auto px-6">
                 <div className="mb-16 pb-8">
                     <h2 className="text-4xl font-bold mb-4">Upcoming Workshops</h2>

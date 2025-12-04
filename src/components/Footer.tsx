@@ -1,24 +1,23 @@
 const Footer = () => {
     return (
-        <footer className="footer border-t border-gray-800 py-16 bg-[#111111]">
+        <footer className="footer border-t border-gray-800 py-8 bg-[#111111]">
             <div className="container mx-auto px-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div>
-                        <h3 className="text-2xl font-bold uppercase mb-4 text-white">Workhorse Studio</h3>
-                        <p className="text-gray-400 max-w-md mb-6">
+                        <h3 className="text-lg font-bold uppercase mb-2 text-white">Workhorse Studio</h3>
+                        <p className="text-gray-400 text-sm max-w-md mb-3">
                             Hands-on design education in a functioning studio environment.
                         </p>
-                        <p className="text-gray-400 text-sm">
+                        <p className="text-gray-400 text-xs">
                             Reclaiming human-centered design for the sake of humanity.
                         </p>
                     </div>
                     <div>
-                        <h4 className="uppercase font-bold mb-4 text-sm text-white tracking-wider">Contact</h4>
-                        <p className="text-gray-400 mb-2">hello@wrkhrs.co</p>
-                        <p className="text-gray-400 text-sm">Washington, DC</p>
+                        <h4 className="uppercase font-bold mb-2 text-xs text-white tracking-wider">Contact</h4>
+                        <p className="text-gray-400 text-sm mb-1">hello@wrkhrs.co</p>
+                        <p className="text-gray-400 text-xs">Washington, DC</p>
                     </div>
                 </div>
-
             </div>
         </footer>
     );
