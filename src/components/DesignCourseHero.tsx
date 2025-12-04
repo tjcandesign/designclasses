@@ -22,8 +22,8 @@ const DesignCourseHero: React.FC = () => {
             ></div>
 
             <div className="relative z-10 container mx-auto px-6 text-center">
-                <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 tracking-tight">
-                    Workhorse Workshops
+                <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 tracking-tight uppercase" style={{ fontFamily: "'Big Shoulders Display', sans-serif" }}>
+                    WORKHORSE WORKSHOPS
                 </h1>
                 <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-12">
                     Hands-on design education in a functioning studio environment.

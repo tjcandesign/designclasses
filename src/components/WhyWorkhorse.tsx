@@ -5,11 +5,11 @@ const WhyWorkhorse: React.FC = () => {
         <section className="py-24 bg-black text-white border-t border-gray-800">
             <div className="container mx-auto px-6">
                 <div className="mb-16">
-                    <h2 className="text-4xl font-bold mb-4">WHY WORKHORSE?</h2>
+                    <h2 className="text-4xl font-bold mb-4">Why Workhorse?</h2>
                     <div className="w-24 h-1 bg-[#FFC107]"></div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     <div className="bg-[#111111] p-8 border border-gray-800 hover:border-[#FFC107] transition-colors duration-300">
                         <h3 className="text-xl font-bold mb-4 text-[#FFC107]">Real Studio Environment</h3>
                         <p className="text-gray-400 text-sm leading-relaxed">
@@ -28,6 +28,13 @@ const WhyWorkhorse: React.FC = () => {
                         <h3 className="text-xl font-bold mb-4 text-[#FFC107]">Professional Network</h3>
                         <p className="text-gray-400 text-sm leading-relaxed">
                             Connect with working professionals, guest lecturers, and fellow designers. Build relationships that can launch your career.
+                        </p>
+                    </div>
+
+                    <div className="bg-[#111111] p-8 border border-gray-800 hover:border-[#FFC107] transition-colors duration-300">
+                        <h3 className="text-xl font-bold mb-4 text-[#FFC107]">Real-World Experience</h3>
+                        <p className="text-gray-400 text-sm leading-relaxed">
+                            It's not just theory. From years of mistakes, we'll help fast-track you through and get you on your way to making, faster.
                         </p>
                     </div>
                 </div>
