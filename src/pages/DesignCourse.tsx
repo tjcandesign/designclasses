@@ -4,6 +4,7 @@ import Overview from '../components/Overview';
 import WorkshopList from '../components/WorkshopList';
 import WhyWorkhorse from '../components/WhyWorkhorse';
 import CTA from '../components/CTA';
+import Colophon from '../components/Colophon';
 
 const DesignCourse: React.FC = () => {
     return (
@@ -13,6 +14,7 @@ const DesignCourse: React.FC = () => {
             <WorkshopList />
             <WhyWorkhorse />
             <CTA />
+            <Colophon />
         </div>
     );
 };

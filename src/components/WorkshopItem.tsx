@@ -44,7 +44,7 @@ const WorkshopItem: React.FC<WorkshopItemProps> = ({ workshop }) => {
                         <h4 className="text-sm font-bold text-white uppercase tracking-wider mb-3 border-b border-gray-800 pb-2">What You'll Learn</h4>
                         <ul className="space-y-2">
                             {workshop.learns.map((item, index) => (
-                                <li key={index} className="text-sm text-gray-400 flex items-start">
+                                <li key={index} className="text-sm text-gray-400 flex items-start" style={{ fontFamily: "'DM Mono', monospace" }}>
                                     <span className="text-[#FFC107] mr-2">•</span> {item}
                                 </li>
                             ))}
@@ -55,7 +55,7 @@ const WorkshopItem: React.FC<WorkshopItemProps> = ({ workshop }) => {
                         <h4 className="text-sm font-bold text-white uppercase tracking-wider mb-3 border-b border-gray-800 pb-2">Outcomes</h4>
                         <ul className="space-y-2">
                             {workshop.outcomes.map((item, index) => (
-                                <li key={index} className="text-sm text-gray-400 flex items-start">
+                                <li key={index} className="text-sm text-gray-400 flex items-start" style={{ fontFamily: "'DM Mono', monospace" }}>
                                     <span className="text-[#FFC107] mr-2">→</span> {item}
                                 </li>
                             ))}

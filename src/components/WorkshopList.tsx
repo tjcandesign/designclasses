@@ -11,7 +11,7 @@ const WorkshopList: React.FC = () => {
             <div className="container mx-auto px-6">
                 <div className="mb-16 pb-8">
                     <h2 className="text-4xl font-bold mb-4">Upcoming Workshops</h2>
-                    <p className="text-gray-400 max-w-2xl">
+                    <p className="text-gray-400 max-w-2xl" style={{ fontFamily: "'DM Mono', monospace" }}>
                         Spaces are limited to 8 students per course to ensure personalized instruction.
                     </p>
                 </div>
