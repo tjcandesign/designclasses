@@ -58,7 +58,7 @@ export const workshops: Workshop[] = [
     },
     {
         id: 'exhibit-design',
-        title: 'Graphic Design for Exhibit Design',
+        title: 'Introduction to Exhibition Design',
         description: 'Learn how to translate 2D graphics into 3D spaces, focusing on environmental design and visitor experience.',
         learns: [
             'Spatial planning and scale',

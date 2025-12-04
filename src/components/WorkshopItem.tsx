@@ -54,8 +54,9 @@ const WorkshopItem: React.FC<WorkshopItemProps> = ({ workshop }) => {
                         <div className="flex items-baseline justify-between mb-4">
                             <div className="text-3xl font-bold text-[#FFC107]">${workshop.price}</div>
                             {workshop.sessions && (
-                                <div className="text-sm text-gray-400">
-                                    {workshop.sessions} session{workshop.sessions > 1 ? 's' : ''}
+                                <div className="text-sm text-gray-400 text-right">
+                                    {workshop.sessions} session{workshop.sessions > 1 ? 's' : ''}<br />
+                                    <span className="text-xs">({workshop.sessions * 90} min total)</span>
                                 </div>
                             )}
                         </div>
