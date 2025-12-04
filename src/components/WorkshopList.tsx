@@ -4,7 +4,7 @@ import { workshops } from '../data/workshops';
 
 const WorkshopList: React.FC = () => {
     return (
-        <section className="py-24 bg-black text-white">
+        <section id="workshops" className="py-24 bg-black text-white">
             <div className="container mx-auto px-6">
                 <div className="mb-16 border-b border-gray-800 pb-8">
                     <h2 className="text-4xl font-bold mb-4">UPCOMING WORKSHOPS</h2>
@@ -13,7 +13,7 @@ const WorkshopList: React.FC = () => {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
                     {workshops.map((workshop) => (
                         <WorkshopItem key={workshop.id} workshop={workshop} />
                     ))}

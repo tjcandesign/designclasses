@@ -10,6 +10,7 @@ export interface Workshop {
     featured?: boolean;
     available?: boolean;
     registrationDate?: string;
+    seatsAvailable?: number;
 }
 
 export const workshops: Workshop[] = [
@@ -32,7 +33,8 @@ export const workshops: Workshop[] = [
         sessions: 1,
         price: 150,
         featured: true,
-        available: true
+        available: true,
+        seatsAvailable: 5
     },
     {
         id: 'beyond-canva',
