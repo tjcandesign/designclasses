@@ -31,18 +31,26 @@ const CTA: React.FC = () => {
                         <p className="text-xl font-medium mb-8 max-w-md">
                             Spaces are limited for our upcoming workshops. Register now to secure your spot or join the waitlist for future sessions.
                         </p>
-                        <div className="space-y-4">
-                            <div className="flex items-center">
-                                <div className="w-12 h-12 bg-black text-[#FFC107] flex items-center justify-center font-bold rounded-full mr-4">1</div>
-                                <p className="font-bold">Select your workshop</p>
+
+                        <div className="max-w-4xl mx-auto bg-[#111111] border border-gray-800 p-8 md:p-12">
+                            <div className="text-center mb-12">
+                                <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Ready to Start?</h2>
+                                <p className="text-gray-400">Secure your spot in an upcoming workshop.</p>
                             </div>
-                            <div className="flex items-center">
-                                <div className="w-12 h-12 bg-black text-[#FFC107] flex items-center justify-center font-bold rounded-full mr-4">2</div>
-                                <p className="font-bold">Submit your details</p>
-                            </div>
-                            <div className="flex items-center">
-                                <div className="w-12 h-12 bg-black text-[#FFC107] flex items-center justify-center font-bold rounded-full mr-4">3</div>
-                                <p className="font-bold">We'll confirm your enrollment</p>
+
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                                <div className="text-center">
+                                    <div className="text-2xl font-bold text-[#FFC107] mb-2" style={{ fontFamily: "'DM Mono', monospace" }}>1</div>
+                                    <h3 className="text-white font-medium mb-2" style={{ fontFamily: "'DM Mono', monospace" }}>Select your workshop</h3>
+                                </div>
+                                <div className="text-center">
+                                    <div className="text-2xl font-bold text-[#FFC107] mb-2" style={{ fontFamily: "'DM Mono', monospace" }}>2</div>
+                                    <h3 className="text-white font-medium mb-2" style={{ fontFamily: "'DM Mono', monospace" }}>Submit your details</h3>
+                                </div>
+                                <div className="text-center">
+                                    <div className="text-2xl font-bold text-[#FFC107] mb-2" style={{ fontFamily: "'DM Mono', monospace" }}>3</div>
+                                    <h3 className="text-white font-medium mb-2" style={{ fontFamily: "'DM Mono', monospace" }}>We'll confirm your enrollment</h3>
+                                </div>
                             </div>
                         </div>
                     </div>

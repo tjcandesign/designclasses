@@ -9,7 +9,7 @@ const Overview: React.FC = () => {
                         <h2 className="text-4xl font-bold mb-6 text-[#FFC107]">The Program</h2>
                     </div>
                     <div className="md:col-span-8">
-                        <p className="text-xl md:text-2xl leading-relaxed font-light text-gray-300 mb-8">
+                        <p className="text-lg md:text-xl leading-relaxed font-light text-gray-300 mb-8">
                             Workhorse Studio Workshops are designed to bridge the gap between academic theory and professional practice.
                             We offer intensive, hands-on courses that focus on real-world skills, production techniques, and the business of design.
                         </p>

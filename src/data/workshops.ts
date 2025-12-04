@@ -30,16 +30,16 @@ export const workshops: Workshop[] = [
             'Foundation for further design study'
         ],
         image: 'https://images.unsplash.com/photo-1626785774573-4b799314346d?q=80&w=1000&auto=format&fit=crop',
-        sessions: 1,
         price: 150,
-        featured: true,
+        sessions: 2,
+        seatsAvailable: 3,
         available: true,
-        seatsAvailable: 5
+        registrationDate: '2025-04-15'
     },
     {
         id: 'beyond-canva',
         title: 'Moving Beyond Canva',
-        description: 'Transition from template-based design to professional custom creation using industry-standard software.',
+        description: 'Move beyond templates and gain a true understanding of Illustrator & Photoshop for professional design workflows.',
         learns: [
             'Limitations of templates vs. custom design',
             'Vector graphics vs. raster images',
@@ -53,12 +53,12 @@ export const workshops: Workshop[] = [
         ],
         image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1000&auto=format&fit=crop',
         sessions: 2,
-        price: 210,
+        price: 220,
         available: false
     },
     {
         id: 'ai-design-workflow',
-        title: 'Modern AI-Assisted Design Workflow',
+        title: 'AI-Assisted Design Workflow',
         description: 'Learn to build and deploy working prototypes in just over an hour using AI tools like Superwhisper, ChatGPT, Windsurf, and Antigravity.',
         learns: [
             'Voice-to-text AI workflow with Superwhisper',

@@ -7,28 +7,6 @@ interface WorkshopItemProps {
 }
 
 const WorkshopItem: React.FC<WorkshopItemProps> = ({ workshop, highlighted = false }) => {
-    // Render seat icons (filled or empty)
-    const renderSeatIcons = (total: number = 8, available: number = 0) => {
-        const filled = total - available;
-        return (
-            <div className="flex gap-1 items-center">
-                {[...Array(total)].map((_, index) => (
-                    <svg
-                        key={index}
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        fill={index < filled ? "#FFC107" : "none"}
-                        stroke={index < filled ? "#FFC107" : "#666"}
-                        strokeWidth={1.5}
-                        className="w-4 h-4"
-                    >
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
-                    </svg>
-                ))}
-            </div>
-        );
-    };
-
     const borderClass = highlighted ? 'border-[#FFC107]' : 'border-gray-800';
 
     return (
@@ -77,7 +55,7 @@ const WorkshopItem: React.FC<WorkshopItemProps> = ({ workshop, highlighted = fal
                             )}
                             {workshop.sessions && (
                                 <div className="text-sm text-gray-400 mt-1" style={{ fontFamily: "'DM Mono', monospace" }}>
-                                    {workshop.sessions === 1 ? '1 session (90 min)' : `${workshop.sessions} x 90-minute sessions`}
+                                    {workshop.sessions === 1 ? '1 90-minute session' : `${workshop.sessions} x 90-minute sessions`}
                                 </div>
                             )}
                         </div>
@@ -87,7 +65,6 @@ const WorkshopItem: React.FC<WorkshopItemProps> = ({ workshop, highlighted = fal
                                 <div className="text-xs text-gray-500 mb-1" style={{ fontFamily: "'DM Mono', monospace" }}>
                                     {workshop.seatsAvailable}/{8} seats Remaining
                                 </div>
-                                {renderSeatIcons(8, workshop.seatsAvailable)}
                             </div>
                         )}
                     </div>

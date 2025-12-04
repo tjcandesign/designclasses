@@ -18,10 +18,7 @@ const Footer = () => {
                         <p className="text-gray-400 text-sm">Washington, DC</p>
                     </div>
                 </div>
-                <div className="mt-12 pt-6 border-t border-gray-800 flex justify-between text-sm text-gray-400">
-                    <span>© {new Date().getFullYear()} Workhorse Studio</span>
-                    <span>Long Live Design</span>
-                </div>
+
             </div>
         </footer>
     );

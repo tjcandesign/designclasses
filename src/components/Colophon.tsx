@@ -2,7 +2,7 @@ import React from 'react';
 
 const Colophon: React.FC = () => {
     return (
-        <section className="py-16 bg-black text-gray-500 border-t border-gray-900 text-xs">
+        <section className="py-16 bg-black text-gray-500 border-t border-gray-900 text-sm">
             <div className="container mx-auto px-6">
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-8" style={{ fontFamily: "'DM Mono', monospace" }}>
 
@@ -27,9 +27,9 @@ const Colophon: React.FC = () => {
                     <div>
                         <h4 className="text-white uppercase mb-4 tracking-wider">Typography</h4>
                         <ul className="space-y-1">
-                            <li><span className="text-[#FFC107]">Headings:</span> Big Shoulders Display</li>
-                            <li><span className="text-[#FFC107]">Body:</span> Inter</li>
-                            <li><span className="text-[#FFC107]">Details:</span> DM Mono</li>
+                            <li><span className="text-[#FFC107]">Headings:</span> <a href="https://fonts.google.com/specimen/Big+Shoulders+Display" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Big Shoulders Display</a></li>
+                            <li><span className="text-[#FFC107]">Body:</span> <a href="https://fonts.google.com/specimen/Inter" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Inter</a></li>
+                            <li><span className="text-[#FFC107]">Details:</span> <a href="https://fonts.google.com/specimen/DM+Mono" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">DM Mono</a></li>
                         </ul>
                     </div>
 
