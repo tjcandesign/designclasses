@@ -5,7 +5,7 @@ const Header = () => {
     return (
         <header className="header border-b border-gray-800 bg-black">
             <div className="container mx-auto px-6 py-6 flex justify-between items-center">
-                <div className="w-48 md:w-56">
+                <div className="w-32 md:w-40">
                     <Link to="/">
                         <img src={logo} alt="Workhorse" className="w-full h-auto" />
                     </Link>

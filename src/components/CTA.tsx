@@ -27,11 +27,6 @@ const CTA: React.FC = () => {
             <div className="container mx-auto px-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
                     <div>
-                        <h2 className="text-5xl font-bold mb-6 tracking-tight">READY TO START?</h2>
-                        <p className="text-xl font-medium mb-8 max-w-md">
-                            Spaces are limited for our upcoming workshops. Register now to secure your spot or join the waitlist for future sessions.
-                        </p>
-
                         <div className="max-w-4xl mx-auto">
                             <div className="text-center mb-12">
                                 <h2 className="text-5xl font-bold mb-4 text-white">READY TO START?</h2>
@@ -39,23 +34,23 @@ const CTA: React.FC = () => {
                             </div>
 
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-                                <div className="text-center">
-                                    <div className="text-4xl font-bold text-[#FFC107] mb-4">1</div>
+                                <div className="text-center flex flex-col items-center">
+                                    <div className="w-16 h-16 rounded-full border-2 border-[#FFC107] flex items-center justify-center text-2xl font-bold text-[#FFC107] mb-4">1</div>
                                     <h3 className="text-xl text-white font-bold mb-2">Select your workshop</h3>
                                 </div>
-                                <div className="text-center">
-                                    <div className="text-4xl font-bold text-[#FFC107] mb-4">2</div>
+                                <div className="text-center flex flex-col items-center">
+                                    <div className="w-16 h-16 rounded-full border-2 border-[#FFC107] flex items-center justify-center text-2xl font-bold text-[#FFC107] mb-4">2</div>
                                     <h3 className="text-xl text-white font-bold mb-2">Submit your details</h3>
                                 </div>
-                                <div className="text-center">
-                                    <div className="text-4xl font-bold text-[#FFC107] mb-4">3</div>
+                                <div className="text-center flex flex-col items-center">
+                                    <div className="w-16 h-16 rounded-full border-2 border-[#FFC107] flex items-center justify-center text-2xl font-bold text-[#FFC107] mb-4">3</div>
                                     <h3 className="text-xl text-white font-bold mb-2">We'll confirm your enrollment</h3>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div className="bg-[#e6ac00] p-10 shadow-2xl relative z-20">
+                    <div className="bg-[#e6ac00] p-10 shadow-2xl relative z-20 border-2 border-black">
                         <h3 className="text-2xl font-bold text-black mb-6">Sign up for more information</h3>
                         <form onSubmit={handleSubmit} className="space-y-6">
                             <div>
