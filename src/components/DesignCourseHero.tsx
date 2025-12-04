@@ -1,10 +1,11 @@
 import React from 'react';
+import heroImage from '../assets/hero-vintage-photo.jpg';
 
 const DesignCourseHero: React.FC = () => {
     return (
         <section className="relative w-full h-[80vh] flex items-center justify-center bg-black overflow-hidden">
-            {/* Background Image Placeholder - Replace with actual image */}
-            <div className="absolute inset-0 opacity-50 bg-[url('https://images.unsplash.com/photo-1558655146-d09347e92766?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-center"></div>
+            {/* Background Image */}
+            <div className="absolute inset-0 opacity-50 bg-cover bg-center" style={{ backgroundImage: `url(${heroImage})` }}></div>
 
             <div className="relative z-10 container mx-auto px-6 text-center">
                 <h1 className="text-6xl md:text-8xl font-bold text-white mb-6 tracking-tight">
