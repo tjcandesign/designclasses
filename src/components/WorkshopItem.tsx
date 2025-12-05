@@ -83,7 +83,7 @@ const WorkshopItem: React.FC<WorkshopItemProps> = ({ workshop, index = 0 }) => {
 
                         <button
                             onClick={openModal}
-                            className="w-full py-3 border-2 border-[#FFC107] text-[#FFC107] hover:bg-[#FFC107] hover:text-black font-bold transition-all uppercase text-sm tracking-widest rounded-full"
+                            className="w-full py-3 border-2 border-[#FFC107] text-[#FFC107] hover:bg-[#FFC107] hover:text-black font-bold transition-all uppercase text-sm tracking-widest rounded-lg"
                         >
                             Register Now
                         </button>
