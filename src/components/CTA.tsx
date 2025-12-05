@@ -21,12 +21,27 @@ const CTA: React.FC = () => {
         }));
     };
 
+    const encode = (data: any) => {
+        return Object.keys(data)
+            .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+            .join("&");
+    }
+
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        console.log('Form submitted:', formData);
-        setSubmittedData(formData);
-        setIsSubmitted(true);
-        setFormData({ name: '', email: '', phone: '' });
+
+        fetch("/", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: encode({ "form-name": "contact", ...formData })
+        })
+            .then(() => {
+                console.log('Form submitted:', formData);
+                setSubmittedData(formData);
+                setIsSubmitted(true);
+                setFormData({ name: '', email: '', phone: '' });
+            })
+            .catch(error => alert(error));
     };
 
     const closeSuccessModal = () => {
@@ -63,7 +78,17 @@ const CTA: React.FC = () => {
 
                     <div className="bg-[#FFC107] p-10 shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] relative z-20 rounded-lg">
                         <h3 className="text-2xl font-bold text-black mb-6">Sign up to receive more information</h3>
-                        <form onSubmit={handleSubmit} className="space-y-6">
+                        <form
+                            onSubmit={handleSubmit}
+                            className="space-y-6"
+                            name="contact"
+                            method="post"
+                            data-netlify="true"
+                            data-netlify-honeypot="bot-field"
+                        >
+                            <input type="hidden" name="form-name" value="contact" />
+                            <input type="hidden" name="bot-field" />
+
                             <div>
                                 <label htmlFor="name" className="block text-black text-sm font-bold mb-2 uppercase tracking-wider">Full Name</label>
                                 <input
