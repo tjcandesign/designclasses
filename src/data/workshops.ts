@@ -53,12 +53,12 @@ export const workshops: Workshop[] = [
         ],
         image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1000&auto=format&fit=crop',
         sessions: 2,
-        price: 220,
+        price: 150,
         available: false
     },
     {
         id: 'ai-design-workflow',
-        title: 'AI-Assisted Design Workflow',
+        title: 'AI-Assisted Web Design',
         description: 'Learn to build and deploy working prototypes in just over an hour using AI tools like Superwhisper, ChatGPT, Windsurf, and Antigravity.',
         learns: [
             'Voice-to-text AI workflow with Superwhisper',
@@ -74,7 +74,7 @@ export const workshops: Workshop[] = [
         image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1000&auto=format&fit=crop',
         available: false,
         sessions: 1,
-        price: 150
+        price: 250
     },
     {
         id: 'laser-cutting',
