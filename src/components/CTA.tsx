@@ -29,21 +29,21 @@ const CTA: React.FC = () => {
                     <div>
                         <div className="max-w-xl">
                             <div className="mb-12 text-left">
-                                <h2 className="text-5xl font-bold mb-4 text-black">READY TO START?</h2>
+                                <h2 className="text-5xl font-bold mb-4 text-black">Ready to Start?</h2>
                                 <p className="text-black text-xl" style={{ fontFamily: "'DM Mono', monospace" }}>Secure your spot in an upcoming workshop.</p>
                             </div>
 
                             <div className="flex flex-col space-y-8">
                                 <div className="flex items-center gap-6">
-                                    <div className="w-16 h-16 rounded-full border-2 border-black flex items-center justify-center text-2xl font-bold text-black shrink-0">1</div>
+                                    <div className="w-12 h-12 rounded-full border-2 border-black flex items-center justify-center text-xl font-bold text-black shrink-0" style={{ fontFamily: "'DM Mono', monospace" }}>1</div>
                                     <h3 className="text-xl text-black font-bold">Select your workshop</h3>
                                 </div>
                                 <div className="flex items-center gap-6">
-                                    <div className="w-16 h-16 rounded-full border-2 border-black flex items-center justify-center text-2xl font-bold text-black shrink-0">2</div>
+                                    <div className="w-12 h-12 rounded-full border-2 border-black flex items-center justify-center text-xl font-bold text-black shrink-0" style={{ fontFamily: "'DM Mono', monospace" }}>2</div>
                                     <h3 className="text-xl text-black font-bold">Submit your details</h3>
                                 </div>
                                 <div className="flex items-center gap-6">
-                                    <div className="w-16 h-16 rounded-full border-2 border-black flex items-center justify-center text-2xl font-bold text-black shrink-0">3</div>
+                                    <div className="w-12 h-12 rounded-full border-2 border-black flex items-center justify-center text-xl font-bold text-black shrink-0" style={{ fontFamily: "'DM Mono', monospace" }}>3</div>
                                     <h3 className="text-xl text-black font-bold">We'll confirm your enrollment</h3>
                                 </div>
                             </div>
@@ -51,7 +51,7 @@ const CTA: React.FC = () => {
                     </div>
 
                     <div className="bg-[#FFC107] p-10 shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] relative z-20 rounded-lg">
-                        <h3 className="text-2xl font-bold text-black mb-6">Sign up for more information</h3>
+                        <h3 className="text-2xl font-bold text-black mb-6">Sign up to receive more information</h3>
                         <form onSubmit={handleSubmit} className="space-y-6">
                             <div>
                                 <label htmlFor="name" className="block text-black text-sm font-bold mb-2 uppercase tracking-wider">Full Name</label>
@@ -98,7 +98,7 @@ const CTA: React.FC = () => {
                                 type="submit"
                                 className="w-full bg-black text-[#FFC107] font-bold py-4 hover:bg-gray-900 transition-colors uppercase tracking-widest text-sm rounded-lg"
                             >
-                                Submit Registration
+                                Submit
                             </button>
                         </form>
                     </div>

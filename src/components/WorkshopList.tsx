@@ -21,7 +21,6 @@ const WorkshopList: React.FC = () => {
                         <WorkshopItem
                             key={workshop.id}
                             workshop={workshop}
-                            highlighted={workshop.id === 'intro-graphic-design'}
                             index={index}
                         />
                     ))}

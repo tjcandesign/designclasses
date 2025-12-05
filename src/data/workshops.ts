@@ -20,7 +20,7 @@ export const workshops: Workshop[] = [
         description: 'A comprehensive introduction to the fundamental principles of graphic design, perfect for those starting their creative journey.',
         learns: [
             'Core design principles (typography, color, layout)',
-            'Introduction to Adobe Creative Cloud',
+            'Introduction to Adobe Creative Suite',
             'Visual hierarchy and composition',
             'Design thinking process'
         ],

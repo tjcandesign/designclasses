@@ -25,7 +25,7 @@ const WhyWorkhorse: React.FC = () => {
         <section className="py-24 bg-[#0a0a0a] text-white border-t border-gray-800">
             <div className="container mx-auto px-6">
                 <div className="mb-16">
-                    <h2 className="text-4xl font-bold mb-4">Why Workhorse?</h2>
+                    <h2 className="text-4xl font-bold mb-4">Why Workhorse Workshops?</h2>
                 </div>
 
                 <motion.div

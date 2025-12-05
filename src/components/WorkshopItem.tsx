@@ -4,12 +4,11 @@ import type { Workshop } from '../data/workshops';
 
 interface WorkshopItemProps {
     workshop: Workshop;
-    highlighted?: boolean;
     index?: number;
 }
 
-const WorkshopItem: React.FC<WorkshopItemProps> = ({ workshop, highlighted = false, index = 0 }) => {
-    const borderClass = highlighted ? 'border-[#FFC107]' : 'border-gray-800';
+const WorkshopItem: React.FC<WorkshopItemProps> = ({ workshop, index = 0 }) => {
+    const borderClass = 'border-[#FFC107]';
     const [isModalOpen, setIsModalOpen] = React.useState(false);
 
     const openModal = () => setIsModalOpen(true);
