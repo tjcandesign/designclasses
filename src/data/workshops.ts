@@ -60,12 +60,12 @@ export const workshops: Workshop[] = [
     {
         id: 'ai-design-workflow',
         title: 'AI-Assisted Web Design',
-        description: 'Learn to build and deploy working prototypes in just over an hour using AI tools like Superwhisper, ChatGPT, Windsurf, and Antigravity.',
+        description: 'Learn to build and deploy working prototypes in just over an hour using the latest AI tools and workflows.',
         learns: [
-            'Voice-to-text AI workflow with Superwhisper',
-            'ChatGPT transcript to prompt engineering',
-            'AI-assisted coding with Windsurf & Antigravity',
-            'Rapid prototyping & deployment via Netlify'
+            'Voice-to-text AI workflows',
+            'Transcript to prompt engineering',
+            'AI-assisted coding environments',
+            'Rapid prototyping & deployment'
         ],
         outcomes: [
             'A fully deployed, working website',
