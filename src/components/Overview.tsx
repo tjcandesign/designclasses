@@ -13,7 +13,7 @@ const Overview: React.FC = () => {
                             Workhorse Studio Workshops are designed to bridge the gap between academic theory and professional practice.
                             We offer intensive, hands-on courses that focus on real-world skills, production techniques, and the business of design.
                         </p>
-                        <p className="text-lg text-gray-400" style={{ fontFamily: "'DM Mono', monospace" }}>
+                        <p className="text-base text-gray-400" style={{ fontFamily: "'DM Mono', monospace" }}>
                             Whether you're a student looking to expand your portfolio or a professional wanting to learn new tools,
                             our workshops provide direct access to industry expertise and equipment.
                         </p>

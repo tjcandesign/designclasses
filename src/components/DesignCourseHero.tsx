@@ -37,6 +37,7 @@ const DesignCourseHero: React.FC = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
                     className="text-xl md:text-2xl text-gray-300 max-w-2xl mx-auto mb-12"
+                    style={{ fontFamily: "'DM Mono', monospace" }}
                 >
                     Hands-on design education in a functioning studio environment.
                 </motion.p>
