@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion } from 'motion/react';
 
 const CTA: React.FC = () => {
     const [formData, setFormData] = useState({
@@ -66,18 +67,36 @@ const CTA: React.FC = () => {
                             </div>
 
                             <div className="flex flex-col space-y-8">
-                                <div className="flex items-center gap-6">
+                                <motion.div
+                                    className="flex items-center gap-6"
+                                    initial={{ opacity: 0, x: -20 }}
+                                    whileInView={{ opacity: 1, x: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ duration: 0.5, delay: 0.2 }}
+                                >
                                     <div className="w-12 h-12 rounded-full border-2 border-black flex items-center justify-center text-xl font-bold text-black shrink-0" style={{ fontFamily: "'DM Mono', monospace" }}>1</div>
                                     <h3 className="text-xl text-black font-bold">Select your workshop</h3>
-                                </div>
-                                <div className="flex items-center gap-6">
+                                </motion.div>
+                                <motion.div
+                                    className="flex items-center gap-6"
+                                    initial={{ opacity: 0, x: -20 }}
+                                    whileInView={{ opacity: 1, x: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ duration: 0.5, delay: 0.4 }}
+                                >
                                     <div className="w-12 h-12 rounded-full border-2 border-black flex items-center justify-center text-xl font-bold text-black shrink-0" style={{ fontFamily: "'DM Mono', monospace" }}>2</div>
                                     <h3 className="text-xl text-black font-bold">Submit your details</h3>
-                                </div>
-                                <div className="flex items-center gap-6">
+                                </motion.div>
+                                <motion.div
+                                    className="flex items-center gap-6"
+                                    initial={{ opacity: 0, x: -20 }}
+                                    whileInView={{ opacity: 1, x: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ duration: 0.5, delay: 0.6 }}
+                                >
                                     <div className="w-12 h-12 rounded-full border-2 border-black flex items-center justify-center text-xl font-bold text-black shrink-0" style={{ fontFamily: "'DM Mono', monospace" }}>3</div>
                                     <h3 className="text-xl text-black font-bold">We'll confirm your enrollment</h3>
-                                </div>
+                                </motion.div>
                             </div>
                         </div>
                     </div>
