@@ -17,11 +17,12 @@ const WorkshopList: React.FC = () => {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-                    {displayedWorkshops.map((workshop) => (
+                    {displayedWorkshops.map((workshop, index) => (
                         <WorkshopItem
                             key={workshop.id}
                             workshop={workshop}
                             highlighted={workshop.id === 'intro-graphic-design'}
+                            index={index}
                         />
                     ))}
                 </div>

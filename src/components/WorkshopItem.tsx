@@ -1,16 +1,24 @@
 import React from 'react';
+import { motion } from 'motion/react';
 import type { Workshop } from '../data/workshops';
 
 interface WorkshopItemProps {
     workshop: Workshop;
     highlighted?: boolean;
+    index?: number;
 }
 
-const WorkshopItem: React.FC<WorkshopItemProps> = ({ workshop, highlighted = false }) => {
+const WorkshopItem: React.FC<WorkshopItemProps> = ({ workshop, highlighted = false, index = 0 }) => {
     const borderClass = highlighted ? 'border-[#FFC107]' : 'border-gray-800';
 
     return (
-        <div className={`workshop-item bg-[#1a1a1a] border ${borderClass} hover:border-[#FFC107] transition-colors duration-300 group flex flex-col h-full shadow-2xl rounded-lg`}>
+        <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.6, delay: index * 0.2, ease: "easeOut" }}
+            className={`workshop-item bg-[#1a1a1a] border ${borderClass} hover:border-[#FFC107] transition-colors duration-300 group flex flex-col h-full shadow-2xl rounded-lg`}
+        >
             <div className="p-8 flex flex-col flex-grow">
                 <div className="mb-6">
                     <h3 className="text-2xl font-bold text-white group-hover:text-[#FFC107] transition-colors mb-2">
@@ -80,7 +88,7 @@ const WorkshopItem: React.FC<WorkshopItemProps> = ({ workshop, highlighted = fal
                     )}
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 };
 
