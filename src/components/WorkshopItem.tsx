@@ -21,7 +21,7 @@ const WorkshopItem: React.FC<WorkshopItemProps> = ({ workshop, index = 0 }) => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.6, delay: index * 0.2, ease: "easeOut" as any }}
-                className={`workshop-item bg-[#1a1a1a] border ${borderClass} hover:border-[#FFC107] transition-colors duration-300 group flex flex-col h-full shadow-2xl rounded-lg`}
+                className={`workshop-item bg-[#1a1a1a] border ${borderClass} hover:bg-[#222] transition-colors duration-300 group flex flex-col h-full shadow-2xl rounded-lg`}
             >
                 <div className="p-8 flex flex-col flex-grow">
                     <div className="mb-6">
@@ -58,10 +58,10 @@ const WorkshopItem: React.FC<WorkshopItemProps> = ({ workshop, index = 0 }) => {
 
                     {/* Pricing and Seat Availability Section */}
                     <div className="mt-auto pt-6 border-t border-gray-800">
-                        <div className="flex items-end justify-between mb-4">
+                        <div className="flex items-end justify-between mb-8">
                             <div>
                                 {workshop.price && (
-                                    <div className="text-3xl font-bold text-[#FFC107]" style={{ fontFamily: "'DM Mono', monospace" }}>
+                                    <div className="text-2xl font-bold text-[#FFC107]" style={{ fontFamily: "'DM Mono', monospace" }}>
                                         ${workshop.price}
                                     </div>
                                 )}
@@ -74,7 +74,7 @@ const WorkshopItem: React.FC<WorkshopItemProps> = ({ workshop, index = 0 }) => {
                                     </div>
                                 )}
                                 {workshop.seatsAvailable !== undefined && workshop.available && (
-                                    <div className="text-xs text-gray-500" style={{ fontFamily: "'DM Mono', monospace" }}>
+                                    <div className="text-sm text-gray-400" style={{ fontFamily: "'DM Mono', monospace" }}>
                                         {workshop.seatsAvailable}/{8} seats Remaining
                                     </div>
                                 )}
@@ -83,7 +83,7 @@ const WorkshopItem: React.FC<WorkshopItemProps> = ({ workshop, index = 0 }) => {
 
                         <button
                             onClick={openModal}
-                            className="w-full py-3 border-2 border-[#FFC107] text-[#FFC107] hover:bg-[#FFC107] hover:text-black font-bold transition-all uppercase text-sm tracking-widest"
+                            className="w-full py-3 border-2 border-[#FFC107] text-[#FFC107] hover:bg-[#FFC107] hover:text-black font-bold transition-all uppercase text-sm tracking-widest rounded-full"
                         >
                             Register Now
                         </button>
@@ -156,7 +156,7 @@ const WorkshopItem: React.FC<WorkshopItemProps> = ({ workshop, index = 0 }) => {
                         <div className="mt-10 pt-8 border-t border-gray-800 flex justify-end">
                             <button
                                 onClick={() => alert('Registration flow would continue here.')}
-                                className="px-8 py-3 bg-[#FFC107] text-black font-bold hover:bg-white transition-all uppercase text-sm tracking-widest rounded"
+                                className="w-full py-3 bg-[#FFC107] text-black font-bold hover:bg-white transition-all uppercase text-sm tracking-widest rounded"
                             >
                                 Proceed to Registration
                             </button>

@@ -54,7 +54,8 @@ export const workshops: Workshop[] = [
         image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1000&auto=format&fit=crop',
         sessions: 2,
         price: 150,
-        available: false
+        seatsAvailable: 5,
+        available: true
     },
     {
         id: 'ai-design-workflow',
@@ -72,7 +73,8 @@ export const workshops: Workshop[] = [
             'Drastically reduced development time'
         ],
         image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1000&auto=format&fit=crop',
-        available: false,
+        available: true,
+        seatsAvailable: 8,
         sessions: 1,
         price: 250
     },
