@@ -6,6 +6,12 @@ const CTA: React.FC = () => {
         email: '',
         phone: ''
     });
+    const [isSubmitted, setIsSubmitted] = useState(false);
+    const [submittedData, setSubmittedData] = useState({
+        name: '',
+        email: '',
+        phone: ''
+    });
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const { name, value } = e.target;
@@ -18,12 +24,17 @@ const CTA: React.FC = () => {
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
         console.log('Form submitted:', formData);
-        alert('Thank you for your interest! We will be in touch shortly.');
+        setSubmittedData(formData);
+        setIsSubmitted(true);
         setFormData({ name: '', email: '', phone: '' });
     };
 
+    const closeSuccessModal = () => {
+        setIsSubmitted(false);
+    };
+
     return (
-        <section className="py-24 bg-[#FFC107] text-black">
+        <section className="py-24 bg-[#FFC107] text-black relative">
             <div className="container mx-auto px-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
                     <div>
@@ -104,6 +115,55 @@ const CTA: React.FC = () => {
                     </div>
                 </div>
             </div>
+
+            {/* Success Modal */}
+            {isSubmitted && (
+                <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+                    <div className="absolute inset-0 bg-black/80 backdrop-blur-sm" onClick={closeSuccessModal}></div>
+                    <div className="relative bg-white p-8 md:p-12 max-w-lg w-full rounded-lg shadow-2xl text-center">
+                        <button onClick={closeSuccessModal} className="absolute top-4 right-4 text-gray-400 hover:text-black">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+
+                        <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                            </svg>
+                        </div>
+
+                        <h3 className="text-2xl font-bold text-black mb-4">Information Received!</h3>
+                        <p className="text-gray-600 mb-6">
+                            Thank you for your interest. We have captured the following details and will be in touch shortly:
+                        </p>
+
+                        <div className="bg-gray-50 p-6 rounded-lg text-left mb-8 border border-gray-200">
+                            <div className="mb-3">
+                                <span className="text-xs font-bold text-gray-400 uppercase tracking-wider block mb-1">Name</span>
+                                <span className="text-lg font-medium text-black" style={{ fontFamily: "'DM Mono', monospace" }}>{submittedData.name}</span>
+                            </div>
+                            <div className="mb-3">
+                                <span className="text-xs font-bold text-gray-400 uppercase tracking-wider block mb-1">Email</span>
+                                <span className="text-lg font-medium text-black" style={{ fontFamily: "'DM Mono', monospace" }}>{submittedData.email}</span>
+                            </div>
+                            {submittedData.phone && (
+                                <div>
+                                    <span className="text-xs font-bold text-gray-400 uppercase tracking-wider block mb-1">Phone</span>
+                                    <span className="text-lg font-medium text-black" style={{ fontFamily: "'DM Mono', monospace" }}>{submittedData.phone}</span>
+                                </div>
+                            )}
+                        </div>
+
+                        <button
+                            onClick={closeSuccessModal}
+                            className="w-full bg-black text-[#FFC107] font-bold py-3 hover:bg-gray-800 transition-colors uppercase tracking-widest text-sm rounded-lg"
+                        >
+                            Close
+                        </button>
+                    </div>
+                </div>
+            )}
         </section>
     );
 };
