@@ -6,8 +6,11 @@ const Colophon: React.FC = () => {
       <div className="container mx-auto px-6">
         <div className="mb-12">
           <h3 className="text-3xl font-bold text-white tracking-tight mb-4">Website Colophon</h3>
-          <p className="max-w-2xl text-gray-400">
+          <p className="max-w-2xl text-gray-400 mb-4">
             This site was designed and developed to serve as a living example of the principles taught in our workshops: clarity, structure, and purpose.
+          </p>
+          <p className="max-w-2xl text-gray-400">
+            Traditionally found at the end of a book, a colophon details the production notes and typography used in its creation. In web design, it serves a similar role by crediting the tools, technologies, and typefaces that power the digital experience.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12" style={{ fontFamily: "'DM Mono', monospace" }}>
