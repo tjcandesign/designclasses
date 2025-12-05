@@ -30,7 +30,7 @@ const CTA: React.FC = () => {
                         <div className="max-w-xl">
                             <div className="mb-12 text-left">
                                 <h2 className="text-5xl font-bold mb-4 text-black">READY TO START?</h2>
-                                <p className="text-black text-xl">Secure your spot in an upcoming workshop.</p>
+                                <p className="text-black text-xl" style={{ fontFamily: "'DM Mono', monospace" }}>Secure your spot in an upcoming workshop.</p>
                             </div>
 
                             <div className="flex flex-col space-y-8">
@@ -50,7 +50,7 @@ const CTA: React.FC = () => {
                         </div>
                     </div>
 
-                    <div className="bg-[#FFC107] p-10 shadow-2xl relative z-20 border-2 border-black">
+                    <div className="bg-[#FFC107] p-10 shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] relative z-20 rounded-lg">
                         <h3 className="text-2xl font-bold text-black mb-6">Sign up for more information</h3>
                         <form onSubmit={handleSubmit} className="space-y-6">
                             <div>
@@ -61,7 +61,8 @@ const CTA: React.FC = () => {
                                     name="name"
                                     value={formData.name}
                                     onChange={handleChange}
-                                    className="w-full bg-[#FFF8E1] border border-black text-black p-4 focus:outline-none focus:border-black transition-colors placeholder-gray-500"
+                                    className="w-full bg-[#FFF8E1] border border-black text-black p-4 focus:outline-none focus:border-black transition-colors placeholder-gray-500 rounded-lg"
+                                    style={{ fontFamily: "'DM Mono', monospace" }}
                                     placeholder="Jane Doe"
                                     required
                                 />
@@ -74,7 +75,8 @@ const CTA: React.FC = () => {
                                     name="email"
                                     value={formData.email}
                                     onChange={handleChange}
-                                    className="w-full bg-[#FFF8E1] border border-black text-black p-4 focus:outline-none focus:border-black transition-colors placeholder-gray-500"
+                                    className="w-full bg-[#FFF8E1] border border-black text-black p-4 focus:outline-none focus:border-black transition-colors placeholder-gray-500 rounded-lg"
+                                    style={{ fontFamily: "'DM Mono', monospace" }}
                                     placeholder="jane@example.com"
                                     required
                                 />
@@ -87,13 +89,14 @@ const CTA: React.FC = () => {
                                     name="phone"
                                     value={formData.phone}
                                     onChange={handleChange}
-                                    className="w-full bg-[#FFF8E1] border border-black text-black p-4 focus:outline-none focus:border-black transition-colors placeholder-gray-500"
+                                    className="w-full bg-[#FFF8E1] border border-black text-black p-4 focus:outline-none focus:border-black transition-colors placeholder-gray-500 rounded-lg"
+                                    style={{ fontFamily: "'DM Mono', monospace" }}
                                     placeholder="(555) 123-4567"
                                 />
                             </div>
                             <button
                                 type="submit"
-                                className="w-full bg-black text-[#FFC107] font-bold py-4 hover:bg-gray-900 transition-colors uppercase tracking-widest text-sm"
+                                className="w-full bg-black text-[#FFC107] font-bold py-4 hover:bg-gray-900 transition-colors uppercase tracking-widest text-sm rounded-lg"
                             >
                                 Submit Registration
                             </button>

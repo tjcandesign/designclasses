@@ -10,7 +10,7 @@ const WorkshopItem: React.FC<WorkshopItemProps> = ({ workshop, highlighted = fal
     const borderClass = highlighted ? 'border-[#FFC107]' : 'border-gray-800';
 
     return (
-        <div className={`workshop-item bg-[#1a1a1a] border ${borderClass} hover:border-[#FFC107] transition-colors duration-300 group flex flex-col h-full shadow-2xl`}>
+        <div className={`workshop-item bg-[#1a1a1a] border ${borderClass} hover:border-[#FFC107] transition-colors duration-300 group flex flex-col h-full shadow-2xl rounded-lg`}>
             <div className="p-8 flex flex-col flex-grow">
                 <div className="mb-6">
                     <h3 className="text-2xl font-bold text-white group-hover:text-[#FFC107] transition-colors mb-2">
