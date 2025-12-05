@@ -27,30 +27,30 @@ const CTA: React.FC = () => {
             <div className="container mx-auto px-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
                     <div>
-                        <div className="max-w-4xl mx-auto">
-                            <div className="text-center mb-12">
-                                <h2 className="text-5xl font-bold mb-4 text-white">READY TO START?</h2>
-                                <p className="text-gray-400">Secure your spot in an upcoming workshop.</p>
+                        <div className="max-w-xl">
+                            <div className="mb-12 text-left">
+                                <h2 className="text-5xl font-bold mb-4 text-black">READY TO START?</h2>
+                                <p className="text-black text-xl">Secure your spot in an upcoming workshop.</p>
                             </div>
 
-                            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-                                <div className="text-center flex flex-col items-center">
-                                    <div className="w-16 h-16 rounded-full border-2 border-[#FFC107] flex items-center justify-center text-2xl font-bold text-[#FFC107] mb-4">1</div>
-                                    <h3 className="text-xl text-white font-bold mb-2">Select your workshop</h3>
+                            <div className="flex flex-col space-y-8">
+                                <div className="flex items-center gap-6">
+                                    <div className="w-16 h-16 rounded-full border-2 border-black flex items-center justify-center text-2xl font-bold text-black shrink-0">1</div>
+                                    <h3 className="text-xl text-black font-bold">Select your workshop</h3>
                                 </div>
-                                <div className="text-center flex flex-col items-center">
-                                    <div className="w-16 h-16 rounded-full border-2 border-[#FFC107] flex items-center justify-center text-2xl font-bold text-[#FFC107] mb-4">2</div>
-                                    <h3 className="text-xl text-white font-bold mb-2">Submit your details</h3>
+                                <div className="flex items-center gap-6">
+                                    <div className="w-16 h-16 rounded-full border-2 border-black flex items-center justify-center text-2xl font-bold text-black shrink-0">2</div>
+                                    <h3 className="text-xl text-black font-bold">Submit your details</h3>
                                 </div>
-                                <div className="text-center flex flex-col items-center">
-                                    <div className="w-16 h-16 rounded-full border-2 border-[#FFC107] flex items-center justify-center text-2xl font-bold text-[#FFC107] mb-4">3</div>
-                                    <h3 className="text-xl text-white font-bold mb-2">We'll confirm your enrollment</h3>
+                                <div className="flex items-center gap-6">
+                                    <div className="w-16 h-16 rounded-full border-2 border-black flex items-center justify-center text-2xl font-bold text-black shrink-0">3</div>
+                                    <h3 className="text-xl text-black font-bold">We'll confirm your enrollment</h3>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div className="bg-[#e6ac00] p-10 shadow-2xl relative z-20 border-2 border-black">
+                    <div className="bg-[#FFC107] p-10 shadow-2xl relative z-20 border-2 border-black">
                         <h3 className="text-2xl font-bold text-black mb-6">Sign up for more information</h3>
                         <form onSubmit={handleSubmit} className="space-y-6">
                             <div>
@@ -61,7 +61,7 @@ const CTA: React.FC = () => {
                                     name="name"
                                     value={formData.name}
                                     onChange={handleChange}
-                                    className="w-full bg-white border border-gray-300 text-black p-4 focus:outline-none focus:border-black transition-colors"
+                                    className="w-full bg-[#FFF8E1] border border-black text-black p-4 focus:outline-none focus:border-black transition-colors placeholder-gray-500"
                                     placeholder="Jane Doe"
                                     required
                                 />
@@ -74,7 +74,7 @@ const CTA: React.FC = () => {
                                     name="email"
                                     value={formData.email}
                                     onChange={handleChange}
-                                    className="w-full bg-white border border-gray-300 text-black p-4 focus:outline-none focus:border-black transition-colors"
+                                    className="w-full bg-[#FFF8E1] border border-black text-black p-4 focus:outline-none focus:border-black transition-colors placeholder-gray-500"
                                     placeholder="jane@example.com"
                                     required
                                 />
@@ -87,7 +87,7 @@ const CTA: React.FC = () => {
                                     name="phone"
                                     value={formData.phone}
                                     onChange={handleChange}
-                                    className="w-full bg-white border border-gray-300 text-black p-4 focus:outline-none focus:border-black transition-colors"
+                                    className="w-full bg-[#FFF8E1] border border-black text-black p-4 focus:outline-none focus:border-black transition-colors placeholder-gray-500"
                                     placeholder="(555) 123-4567"
                                 />
                             </div>
