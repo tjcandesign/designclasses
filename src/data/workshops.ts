@@ -16,7 +16,7 @@ export interface Workshop {
 export const workshops: Workshop[] = [
     {
         id: 'intro-graphic-design',
-        title: 'Beginner Intro to Graphic Design',
+        title: 'Intro to Graphic Design',
         description: 'A comprehensive introduction to the fundamental principles of graphic design, perfect for those starting their creative journey.',
         learns: [
             'Core design principles (typography, color, layout)',

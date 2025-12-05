@@ -77,7 +77,7 @@ const CTA: React.FC = () => {
                     </div>
 
                     <div className="bg-[#FFC107] p-10 shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] relative z-20 rounded-lg">
-                        <h3 className="text-2xl font-bold text-black mb-6">Sign up to receive more information</h3>
+                        <h3 className="text-2xl font-bold text-black mb-6">Sign up to receive more information via Email</h3>
                         <form
                             onSubmit={handleSubmit}
                             className="space-y-6"

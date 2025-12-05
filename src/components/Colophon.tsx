@@ -5,7 +5,7 @@ const Colophon: React.FC = () => {
     <section className="py-16 bg-black text-gray-500 border-t border-gray-900 text-sm">
       <div className="container mx-auto px-6">
         <div className="mb-12">
-          <h3 className="text-3xl font-bold text-white tracking-wider mb-4">Colophon <span className="tracking-tight">Website</span></h3>
+          <h3 className="text-3xl font-bold text-white tracking-tight mb-4">Website Colophon</h3>
           <p className="max-w-2xl text-gray-400">
             This site was designed and developed to serve as a living example of the principles taught in our workshops: clarity, structure, and purpose.
           </p>
