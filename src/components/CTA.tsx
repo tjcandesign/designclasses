@@ -27,34 +27,41 @@ const CTA: React.FC = () => {
             .join("&");
     }
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
 
-        // Send to both Netlify Forms and Zapier webhook
-        Promise.all([
-            // Netlify Forms (backup)
-            fetch("/", {
+        try {
+            // Always submit to Netlify Forms (this is our primary backup)
+            await fetch("/", {
                 method: "POST",
                 headers: { "Content-Type": "application/x-www-form-urlencoded" },
                 body: encode({ "form-name": "contact", ...formData })
-            }),
-            // Zapier Webhook
-            fetch("https://hooks.zapier.com/hooks/catch/2252947/ufypnnm/", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(formData)
-            })
-        ])
-            .then(() => {
-                console.log('Form submitted:', formData);
-                setSubmittedData(formData);
-                setIsSubmitted(true);
-                setFormData({ name: '', email: '', phone: '' });
-            })
-            .catch(error => {
-                console.error('Form submission error:', error);
-                alert('There was an error submitting the form. Please try again.');
             });
+
+            // Try to send to Zapier webhook (may fail due to CORS, but that's okay)
+            try {
+                await fetch("https://hooks.zapier.com/hooks/catch/2252947/ufypnnm/", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(formData),
+                    mode: 'no-cors' // This prevents CORS errors but we won't get response
+                });
+                console.log('Zapier webhook called (no-cors mode)');
+            } catch (zapierError) {
+                console.log('Zapier webhook failed (expected with CORS):', zapierError);
+                // Don't fail the whole form submission if Zapier fails
+            }
+
+            // Show success modal
+            console.log('Form submitted:', formData);
+            setSubmittedData(formData);
+            setIsSubmitted(true);
+            setFormData({ name: '', email: '', phone: '' });
+
+        } catch (error) {
+            console.error('Form submission error:', error);
+            alert('There was an error submitting the form. Please try again.');
+        }
     };
 
     const closeSuccessModal = () => {
