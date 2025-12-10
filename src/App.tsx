@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import WorkshopDetail from './pages/WorkshopDetail';
 import BudgetPlan from './pages/BudgetPlan';
 import DesignCourse from './pages/DesignCourse';
+import Register from './pages/Register';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             <Route path="/workshop/:id" element={<WorkshopDetail />} />
             <Route path="/plan" element={<BudgetPlan />} />
             <Route path="/course" element={<DesignCourse />} />
+            <Route path="/register" element={<Register />} />
           </Routes>
         </main>
         <Footer />
